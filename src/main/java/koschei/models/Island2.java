@@ -1,8 +1,14 @@
 package koschei.models;
 
+/*
+   Этот класс НЕ является @Component,
+   потому что его бин создаётся вручную в AppConfig через @Bean метод.
+   Получает зависимость Wood3 через конструктор там же.
+   Wood3 — компонент с аннотацией @Component, бин создаётся автоматически.
+ */
 public class Island2 {
 
-    private Wood3 wood;
+    private final Wood3 wood;
 
     public Island2(Wood3 wood) {
         this.wood = wood;
