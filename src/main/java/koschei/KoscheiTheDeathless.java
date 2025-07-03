@@ -13,6 +13,10 @@ public class KoscheiTheDeathless {
         return "На свете есть океан , " + ocean.toString();
     }
 
+    // KoscheiTheDeathless связывается с Ocean1 через сеттер setOcean
+    // Для этого классы KoscheiTheDeathless и Ocean1
+    // помечены аннотацией @Component (чтобы Spring их обнаружил и создал бины)
+
     @Autowired
     public void setOcean(Ocean1 ocean) {
         this.ocean = ocean;
